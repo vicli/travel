@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  info_url: MyString
+  time: 9.99
+  size: 9.99
+  activity: MyString
+  budget: MyString
+  age: 9.99
+  tourist: MyString
+  rating: 9.99
+  tag: MyText
+
+two:
+  name: MyString
+  description: MyText
+  info_url: MyString
+  time: 9.99
+  size: 9.99
+  activity: MyString
+  budget: MyString
+  age: 9.99
+  tourist: MyString
+  rating: 9.99
+  tag: MyText

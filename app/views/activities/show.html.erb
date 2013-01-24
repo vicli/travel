@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @activity.name %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @activity.category %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @activity.description %>
+</p>
+
+<p>
+  <b>Info url:</b>
+  <%= @activity.info_url %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @activity.time %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @activity.size %>
+</p>
+
+<p>
+  <b>Activity:</b>
+  <%= @activity.activity %>
+</p>
+
+<p>
+  <b>Budget:</b>
+  <%= @activity.budget %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @activity.age %>
+</p>
+
+<p>
+  <b>Tourist:</b>
+  <%= @activity.tourist %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @activity.rating %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%= @activity.tag %>
+</p>
+
+
+<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Back', activities_path %>

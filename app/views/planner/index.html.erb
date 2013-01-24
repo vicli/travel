@@ -1,0 +1,383 @@
+  <head>
+       <script >
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  $(function() {
+    $( "#radio" ).buttonset();
+  });
+  $(function() {
+    $( "#radiosize" ).buttonset();
+  });
+  $(function() {
+    $( "#radioage" ).buttonset();
+  });
+  $(function() {
+    $( "#radioact" ).buttonset();
+  });
+  $(function() {
+    $( "#radiotour" ).buttonset();
+  });  
+  $(function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  });
+  function divScroll(){
+    var Top = document.getElementById('timecolumn');
+    var Bot = document.getElementById('tabcont');
+    Top.scrollLeft = Bot.scrollLeft;
+  }
+  $(function(){
+  $('input[type="radio"]').click(function(){
+    if ($(this).is(':checked'))
+    {
+      alert($(this).val());
+    }
+  });
+});
+  $(function() {
+    $( "#sortable" ).sortable({placeholder: "ui-state-highlight"});
+    $( "#sortable" ).disableSelection();
+  });
+  </script>
+    <style>
+      body{
+        background: url('../assets/background2.png');
+        background-size: cover;
+        padding-top: 80px;
+        font-family: opensans;
+      }
+      h1{
+
+      }
+      #timecolumn{
+        background-color: #E1EEF4;
+        opacity: 0.75;
+        width: 60px;
+        height: 650px;
+        padding: 10px;
+        margin-left: -40px;
+        overflow:auto;
+        display: inline;
+        float: left;
+        border-radius: 10px;
+      }
+      #itinerarycontainer{
+        background-color: #E1EEF4;
+        opacity: 0.85;
+        width: 550px;
+        height: 640px;
+        padding:10px;
+        margin-left: 20px;
+        display: inline;
+        float: left;
+        
+        /*background-color: #F2F1D6;*/
+        border-radius: 10px;
+       /* padding: 20px 20px 20px 20px;*/
+      }
+      #togglecontainer{
+        background-color: #E1EEF4;
+        opacity: 0.75;
+        width: 290px;
+        height: 220px;
+        display: inline;
+        margin-left: 20px;
+        float: left;
+        margin-right: -200px;
+        border-radius: 10px;
+        padding: 20px 15px 15px 35px;
+      }
+      .rowcont{
+        width: 280px;
+
+        display: inline;
+        float: left;
+      }
+      #cont{
+        float: left;
+        display: inline;
+      }
+      #infocontainer{
+        background-color: #E1EEF4;
+        opacity: 0.75;
+        width: 320px;
+        height: 365px;
+        display: inline;
+        margin-left: 20px;
+        margin-top: 20px;
+        float: left;
+        margin-right: -100px;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        overflow: hidden;
+      }
+      .span{
+        display: inline;
+        width: 350px;
+        height: 35px;
+      }
+      .label{
+        width: 100px;
+        height: 35px;  
+      }
+      .entry{
+        font-family: opensans;
+      }
+      
+      .itheading{
+        font-family: opensans;
+        
+        float:center;
+        font-size: 34px;
+      }
+      #toggleelement{
+        display:inline;
+        height: 35px;
+      }
+      #rightsec{
+        width: 320px;
+        display: inline;
+      }
+      #radio, #radiosize, #radioage, #radioact, #radiotour{
+        width: 250px;
+        height: 35px;  
+        display: inline;
+        vertical-align:text-top;
+        padding:0;
+        margin:0;
+        //position:relative;
+        //overflow:hidden;
+      }
+      #title{
+        float:left; 
+        display: inline;
+        margin-right: 20px;
+        
+      }
+      #input{
+        float: left;
+        margin-left: 20px;
+        display: inline;
+        
+      }
+      #tabs{
+        height:630px;
+
+      }
+      .tabcont{
+        height: 550px;
+        overflow:auto;
+
+      }
+      .timecell{
+        font-family: opensans;
+        font-size: 22px;
+        margin-top: 60px;
+        padding: 10px;
+        height: 60px;
+        text-align: right;
+      }
+      .timecell{
+        font-family: opensans;
+        padding: 10px;
+        height: 60px;
+        text-align: left;
+      }
+      .ui-state-default-act{
+        width: 460px;
+        font-family: opensans;
+        border-style: solid;
+        border-width: 2px;
+        border-bottom-width: 1px;
+        border-top-width: 1px;
+        border-color: #BACCD8;
+        border-radius: 6px;
+        padding: 10px;
+        background-color: #E8E6E3;
+        opacity: 0.9;
+        margin-bottom: 10px;
+      }
+      .ui-state-default-act h3{
+        font-size: 18px;
+        color: #1C1C1C;
+      }
+      .ui-button{
+        border-radius: 6px;
+        font-family: opensans;
+        background-color: white;
+        opacity: 0.75;
+      }
+      #changebut{
+        display: inline;
+        height: 10px;
+        border-radius: 5px;
+        margin-top: 200px;
+        color: black;
+
+      }
+      #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+      #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 30px; }
+      #sortable li span { position: absolute; margin-left: -1.3em; }
+
+    </style>
+    <h2 class = "itheading">this is your itinerary for your <script type="text/javascript">document.write('city');</script>trip</h2>
+  </head>
+  
+  <body>
+
+    <div id ="timecolumn">
+      <div class="timecell"> 9:00</div>
+      <div class="timecell"> 10:00</div>
+      <div class="timecell"> 11:00</div>
+      <div class="timecell"> 12:00</div>
+      <div class="timecell"> 1:00</div>
+    </div>
+    <div id ="itinerarycontainer">
+          <div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Day 1</a></li>
+    <li><a href="#tabs-2">Day 2</a></li>
+  </ul>
+  <div id="tabs-1">
+    <div class="tabcont" onscroll="divScroll();">
+      <ul id = "sortable">
+        <% @restaurants.each do |restaurant| %>
+          <%= content_tag :div, :class => "ui-state-default-act" do %>
+             <div class="entry"> 
+            <h3><%= restaurant.name %></h3>
+            // <script type="text/javascript">
+            //   var ratingsymbol = "0";
+            //   var ratingval = "<%= restaurant.rating %>";
+
+            //   if(ratingval == 1){
+            //    ratingsymbol = "★";
+            //   }
+            //   else if(ratingval == 2){
+            //     ratingsymbol = "★★";
+            //   }
+            //   else if(ratingval == 3){
+            //     ratingsymbol = "★★★";
+            //   }
+            //   else if(ratingval == 4){
+            //     ratingsymbol = "★★★★";
+            //   }
+            //   else if(ratingval == 5){
+            //     ratingsymbol = "★★★★★";
+            //   }
+            //   document.write(ratingsymbol.toString());
+            // </script>
+
+            // <script type="text/javascript">
+            //   var budgetsymbol = "0";
+            //   var budgetval = "<%= restaurant.budget %>";
+
+            //   if(budgetval == 1){
+            //    budgetsymbol = "$";
+            //   }
+            //   else if(budgetval == 2){
+            //     budgetsymbol = "$$";
+            //   }
+            //   else if(budgetval == 3){
+            //     budgetsymbol = "$$$";
+            //   }
+            //   document.write(budgetsymbol.toString());
+            // </script>
+            <p><%=sanitize restaurant.description %></p>
+
+          </div>
+      <% end %>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div id="tabs-2">
+    <p>
+      test..
+    </p>
+  </div>
+</div>
+      
+    </div>
+    <div id = "rightsec">
+    <div id= "togglecontainer">
+      <form name = "toggleform"> 
+      <div class="rowcont">        
+        <div id="radio" name = "budgettog">
+          <div id="title">
+            <label>Budget</label> 
+          </div>  
+          <div id="input">  
+            <input type="radio" id="radio1" value = "b1" name="budget" /><label for="radio1">$</label>
+            <input type="radio" id="radio2" value = "b2"name="budget" checked="checked" /><label for="radio2">$$</label>
+            <input type="radio" id="radio3" value = "b3"name="budget" /><label for="radio3">$$$</label> 
+          </div>          
+         </div>
+         </div>
+
+      <br />
+
+        <div id="radiosize" name = "sizetog">
+          <div id="title">
+            <label>Size</label>
+          </div>
+        <div id="input">
+          <input type="radio" id="radio4" value = "g1" name="size" /><label for="radio4">웃</label>
+          <input type="radio" id="radio5" value = "g2" name="size" checked="checked" /><label for="radio5">웃웃</label>
+          <input type="radio" id="radio6" value = "g3" name="size" /><label for="radio6">웃웃웃+</label>
+        </div>
+        </div>
+
+      <br />
+        <div id="radioage" name = "agetog">
+          <div id="title">
+            <label>Age</label>
+          </div>
+          <div id="input">
+          <input type="radio" id="radio7" value = "a1" name="age" /><label for="radio7">18-30</label>
+          <input type="radio" id="radio8" value = "a2" name="age" checked="checked" /><label for="radio8">30-50</label>
+          <input type="radio" id="radio9" value = "a3" name="age" /><label for="radio9">50+</label>
+        </div>
+
+      </div>
+      <br />
+
+        <div id="radioact" name = "acttog">
+          <div id="title">
+            <label>Activity Level</label>
+          </div>
+          <div id="input">
+          <input type="radio" id="radio10" value = "l1" name="activity" /><label for="radio10">L</label>
+          <input type="radio" id="radio11" value = "l2" name="activity" checked="checked" /><label for="radio11">M</label>
+          <input type="radio" id="radio12" value = "l3" name="activity" /><label for="radio12">H</label>
+        </div>
+        </div>
+
+      <br />
+
+        <div id="radiotour" name = "tourtog">
+          <div id="title">
+          <label>Touristiness</label>
+        </div>
+        <div id="input">
+          <input type="radio" id="radio13" value = "t1" name="tourist" /><label for="radio13">L</label>
+          <input type="radio" id="radio14" value = "t2" name="tourist" checked="checked" /><label for="radio14">M</label>
+          <input type="radio" id="radio15" value = "t3" name="tourist" /><label for="radio15">H</label>
+        </div>
+        </div>
+      </div>
+
+      <div class = 'cont'>
+      <input type="submit" class = "ui-button" value="Change">
+    </div>
+      </form>
+      </div>
+    <div id= "infocontainer">
+    </div>
+  </div>
+
+ 
+
+    
+  </body>

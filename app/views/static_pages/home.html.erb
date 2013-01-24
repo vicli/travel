@@ -1,0 +1,345 @@
+
+<style type="text/css">
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+	body{
+		background-color: #F7F3EB;
+		padding-top: 100px;
+		background: url('../assets/background3.png');
+		background-size: cover;
+		width: 100%;
+	}
+
+	#main{
+		font-size: 70px;
+		font-family: opensans;
+	}
+	#home-start-button{
+		top: 50%;
+		left: 50%;
+		margin: -5px 0 0 280px;
+	}
+
+	.hero-unit{
+		padding: 20px;
+        width: 600px;
+        height: 60px;
+        margin: 10px 15px 10px 15px;
+        border-radius: 10px;
+        float: center;
+      }
+	  .bigheadingtext{
+	  	color: #3D4444;
+	  	font-size: 40px;
+	  	text-align: left;
+	  }
+      .bigheadingsubtext{
+      	color: #4D5454;
+      }
+      .introunit{
+      	text-align: ;
+      	font-size: 60px;
+      	font-family: opensans;
+      	height: 50px;
+      	padding-top: 50px;
+      	padding-left: 100px;
+      	line-height: 70%;
+      }
+      .centeredunits{
+      	padding-top: 200px;
+      	padding-left: 100px;
+      	height: 400px;
+      }
+      .firstline{
+      	font-family: opensans;
+      	font-size: 26px;
+      }
+      #thirdline{
+      	font-family: opensans;
+      	font-size: 22px;
+      	padding-left: 300px;
+      }
+.wrapper-dropdown-3 {
+    /* Size and position */
+    position: relative;
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 15px;
+    margin-left: 50px;
+    opacity: 0.85;
+    float: left;
+ 
+    /* Styles */
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+ 
+    /* Font settings */
+
+    font-family: opensans;
+    text-align: center;
+    font-size: 26px;
+    color: #8AA8BD;
+}
+.wrapper-dropdown-3:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #8aa8bd transparent;
+}
+.wrapper-dropdown-3 .dropdown {
+  /* Size & position */
+    position: absolute;
+    top: 140%;
+    left: 0;
+    right: 0;
+ 
+    /* Styles */
+    background: white;
+    border-radius: inherit;
+    border: 1px solid rgba(0,0,0,0.17);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-weight: normal;
+    transition: all 0.5s ease-in;
+    list-style: none;
+ 
+    /* Hiding */
+    opacity: 0;
+    pointer-events: none;
+}
+ 
+.wrapper-dropdown-3 .dropdown li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #8aa8bd;
+    border-bottom: 1px solid #e6e8ea;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,1);
+    transition: all 0.3s ease-out;
+}
+ 
+.wrapper-dropdown-3 .dropdown li i {
+    float: right;
+    color: inherit;
+}
+ 
+.wrapper-dropdown-3 .dropdown li:first-of-type a {
+    border-radius: 7px 7px 0 0;
+}
+ 
+.wrapper-dropdown-3 .dropdown li:last-of-type a {
+    border-radius: 0 0 7px 7px;
+    border: none;
+}
+ 
+/* Hover state */
+ 
+.wrapper-dropdown-3 .dropdown li:hover a {
+    background: #f3f8f8;
+}
+.wrapper-dropdown-3 .dropdown:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    right: 15px;
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-color: #fff transparent;    
+}
+ 
+.wrapper-dropdown-3 .dropdown:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    right: 13px;
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.1) transparent;    
+}
+.wrapper-dropdown-3.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+.cusbutton{
+	font-size: 50px;
+	font-family: opensans;
+	text-align: center;
+	vertical-align: center;
+	display: inline;
+	color:#38010E;
+	border-color: transparent;
+	border-radius: 5px;
+	padding: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 30px;
+	background-color: transparent;
+
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    margin-left: 300px;
+    margin-bottom: 100px;
+     &:hover {
+    		background-color: white;
+    		opacity: 0.75;
+    		font-color:#822222;
+    	}
+}
+.cusbutton:hover{
+	background-color:white;
+}
+.ui-button{
+		font-size: 20px;
+		text-align: center;
+		vertical-align: center;
+		height: 40px;
+		width: 150px;
+		padding: 0px;
+		margin: 0px;
+        border-radius: 6px;
+        font-family: opensans;
+        background-color: white;
+        opacity: 0.75;
+        text-decoration: none;
+        &:hover {
+    		color: white;
+    		text-decoration: none;
+    		background-color: #A9D3D3;
+  }
+
+      }
+</style>
+<script type="text/javascript">
+	var city = '';
+</script>
+
+<script type="text/javascript">
+
+	function DropDown(el) {
+    	this.dd = el;
+    	this.placeholder = this.dd.children('span');
+    	this.opts = this.dd.find('ul.dropdown > li');
+    	this.val = '';
+    	this.index = -1;
+    	this.initEvents();
+	}
+
+DropDown.prototype = {
+    initEvents : function() {
+        var obj = this;
+ 
+        obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+        });
+ 
+        obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+        });
+    },
+    getValue : function() {
+        return this.val;
+    },
+    getIndex : function() {
+        return this.index;
+    }
+};
+
+    $(function(){
+    	var dd= new DropDown( $('#dd'));
+
+    	$(document).click(function(){
+    		$('.wrapper-dropdown-3').removeClass('active');
+    	});
+
+    });
+    $(function(){
+    	var dd= new DropDown( $('#dd2'));
+
+    	$(document).click(function(){
+    		$('.wrapper-dropdown-3').removeClass('active');
+    	});
+
+    });
+    function save_data(){
+    	arrayOfLines = $("#dd").text().match(/[^\r\n]+/g);	
+    	arrayOfLines2 = $("#dd2").text().match(/[^\r\n]+/g);		
+		city = arrayOfLines[0].replace(/\s+/g, ' ');
+		theme = arrayOfLines2[0].replace(/\s+/g, ' ');
+    };
+  	
+
+</script>
+
+<body>
+
+<div class = "info">
+<!-- <p id = "main">onboard</p> -->
+<div class ="introunit">
+	<p class = "firstline"> going somewhere? </p>
+	<span style="padding-left: 140px">get <span style ="font-size:100px">onBoard</span> </span>
+	<br/>
+	<br/>
+	<p><span id="thirdline"> your <em>dream</em> vacation in just <span style="color:#822222;"><strong>5 clicks</strong></span></span></p>
+</div>	
+<br/>
+<div class = 'centeredunits'>
+	<form>
+	<select id="dd" class="wrapper-dropdown-3" type = "select" tabindex="1" name = "city">
+
+        		<option><a href="#">Boston</a></option>
+        		<option><a href="#">New York City</a></option>
+        		<option><a href="#">San Francisco</a></option>
+    	
+	</select>
+
+	<select id="dd2" class="wrapper-dropdown-3" tabindex="1">
+    	<span>theme</span>
+    		<ul class="dropdown">
+        		<option><a href="#">Laidback Getaway</a></option>
+        		<option><a href="#">Sexy Escape</a></option>
+        		<option><a href="#">Nature Lover</a></option>
+        		<option><a href="#">Spring Break</a></option>
+        		<option><a href="#">Family Fun</a></option>
+    		</ul>
+	</select>
+</form>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	
+<!-- <div id= "home-start-button"><%= link_to "Let's go!", 'planner', class: "btn btn-large btn-primary" %>
+</div> -->
+<br/>
+<%= button_to "go", 'planner', :method => "get", class: "cusbutton", type: "submit"%>
+<!-- <form action="/planner">
+<input type = "button" class = "ui-button" onclick="change_city();" value ="go!">
+</form> -->
+</div>
+
+</div>
+</body>

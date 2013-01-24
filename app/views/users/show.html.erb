@@ -1,0 +1,31 @@
+<style type="text/css">
+body{
+  background: url('../assets/background2.png');
+  background-size: cover;
+}
+</style>
+
+<% provide(:title, @user.name) %>
+<div class="row">
+	<aside class="span4">
+		<section>
+			<h1>
+	<%= gravatar_for @user %>
+	<%= @user.name %></h1>
+</section>
+</aside>
+</div>
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Login:</b>
+  <%= @user.login %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> 
+

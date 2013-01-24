@@ -1,0 +1,214 @@
+
+$bodyBackground: #ECDED1;
+$navbarBackgroundHighlight: #A9D3D3;
+$heroUnitBackground:  #D8D8D8;  
+$navbarHeight: 50px;           
+$startColor: black;
+$endColor: black;
+$textColor: black;
+
+@import "bootstrap";
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+@mixin box-sizing ($boxmodel){
+  -webkit-box-sizing: $boxmodel;
+  -moz-box-sizing: $boxmodel;
+  -ms-box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
+}
+.navbar {
+
+  .navbar-inner {
+    background-color: #232323;
+    background-image: url('logoo.png');
+    background-size: 200px 100px;
+    background-position: 3% 0%;
+    padding-left:50px;
+    background-repeat: no-repeat;
+    font-size: 24px;
+    font-family: opensans;
+    height: 60px;
+  }
+  .navbar-text{
+    color: #E6F3FF;
+  }
+  .nav.pull-right{
+    color: #E6F3FF;
+  }
+  .nav > li > a {
+    float: none;
+    line-height: 10px;
+    padding: 9px 10px 11px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color: #E6F3FF;
+    font-size: 14px;
+    font-family: opensans;
+}
+}
+/* universal */
+@font-face{
+  font-family: opensansb;
+  src: url('../assets/OpenSans-Bold.ttf') format("truetype");
+}
+
+@font-face{
+  font-family: opensans;
+  src: url('../assets/OpenSans-Regular.ttf') format("truetype");
+}
+
+@font-face{
+  font-family: opensansl;
+  src: url('../assets/OpenSans-Light.ttf') format("truetype");
+}
+@font-face{
+  font-family: opensanssb;
+  src: url('../assets/OpenSans-Semibold.ttf') format("truetype");
+}
+html {
+  overflow-y: scroll;
+}
+body {
+  font-family: roboto;
+  background-color: #ECDED1;
+  padding-top: 80px;
+
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 30px;
+
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: regular;
+  font-family: opensans;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #3D4444;
+  font-weight: regular;
+  font-family: opensans;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  font-weight: regular;
+  font-family: opensans;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 2em;
+  color: #122C2D;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: regular;
+  line-height: 1;
+  font-family: opensans;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #A9D3D3;
+  }
+
+}
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid $grayLight;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 30px;
+      text-align: left;
+      font-family: opensans;
+      letter-spacing: 5px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+      text-decoration: none;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+#footer {
+    height: 60px;
+    font-family: opensans;
+    color: #B7B7B7;
+    text-align: center;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: none;
+
+  
+  /*@include box_sizing();*/
+}
+
+input {
+  height: auto !important;
+}
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+ }
+

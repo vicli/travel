@@ -1,0 +1,35 @@
+<% provide(:title, 'Sign up') %>
+<h1>Get onboard!</h1>
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@user) do |f| %>
+			<% if @user.errors.any? %>
+    			<div id="error_explanation">
+      				<h2>This form couldn't be saved due to <%= pluralize(@user.errors.count, "error") %>:</h2>
+
+      			<ul>
+      			<% @user.errors.full_messages.each do |msg| %>
+        		<li><%= msg %></li>
+      			<% end %>
+      			</ul>
+    			</div>
+  			<% end %>
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+
+			<%= f.label :login %>
+			<%= f.text_field :login %>
+
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+
+			<%= f.label :password_confirmation, "Confirmation" %>
+			<%= f.password_field :password_confirmation %>
+
+			<%= f.submit "Create my account", class: "btn btn-large 	btn-primary" %>
+		<% end %>
+	</div>
+</div>
+
+
+<!-- <#%= link_to 'Back', users_path %> -->
