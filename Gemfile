@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
 gem 'rails', '3.2.11'
 gem 'bootstrap-sass', '2.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'csv-mapper'
-gem 'thin'
+gem 'heroku'
 
 
 # Bundle edge Rails instead:
@@ -32,6 +33,7 @@ end
 
 
 gem 'jquery-rails', '2.0.2'
+gem 'pdfkit'
 
 group :test do
 	gem 'capybara', '1.1.2'

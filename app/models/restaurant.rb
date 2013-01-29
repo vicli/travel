@@ -49,7 +49,7 @@ require 'csv'
         record = Restaurant.new(
             :name   => row[0], 
             :category => row[1],
-            :description => row[2],
+            :description => row[11],
             :info_url => row[3],
             :time => row[4],
             :size => row[5],

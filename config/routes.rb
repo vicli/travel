@@ -7,7 +7,7 @@ Travel::Application.routes.draw do
 
   match '/test', to:'planner#update'
   match '/about', to:'static_pages#about'
-  match '/home', to:'static_pages#home'
+  match 'http://nityas.scripts.mit.edu/onbored/', to:'static_pages#home'
   match '/planner', to:'planner#index'
  
   resources :sessions, only: [:new, :create, :destroy]

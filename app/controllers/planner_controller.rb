@@ -8,7 +8,6 @@ class PlannerController < ApplicationController
 
    def update
    	puts "inupdate"
-    puts params[:day]
    	b= params[:budget]
    
       g=params[:size]
@@ -25,10 +24,7 @@ class PlannerController < ApplicationController
     @drestlist = @drestaurants 
     @lrestlist = @lrestaurants 
 
-    @day1 = oneday()
-    @day2 = oneday()
-
-    @fulldays = @day1 + @day2
+    @fullday = oneday()
 
 
     # for i in num_days
@@ -39,7 +35,6 @@ class PlannerController < ApplicationController
     lrestlist = @lrestaurants 
     puts @activities.size
     respond_to do |format|
-
     	format.html {render :partial => 'planner/load'}
     	format.js {render :partial => 'planner/load'}
     end
