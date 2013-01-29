@@ -1,8 +1,9 @@
 class Restaurant < ActiveRecord::Base
   
-  attr_accessible :name, :category, :age, :budget, 
+  attr_accessible :activity, :category, :age, :budget, 
     :description, :info_url, :name, :rating, 
     :size, :tag, :time, :tourist, :location
+
   scope :lunch, where("category = 'l'")
   scope :dinner, where("category = 'd'")
 
