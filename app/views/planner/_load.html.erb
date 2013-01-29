@@ -1,0 +1,196 @@
+<script type="text/javascript">
+$('.ui-state-default-act1').dblclick(function(){
+  
+  alert("hi");
+});
+$('.ui-state-default-act2').dblclick(function(){
+  alert("yay");
+});
+$('.ui-state-default-act3').dblclick(function(){
+  alert("yay");
+});
+$('.ui-state-default-act4').dblclick(function(){
+  alert("yay");
+});
+$(function() {
+    $( "#tabs" ).tabs();
+  });
+</script>
+
+<style>
+
+.ui-state-default-act1{
+        width: 460px;
+        height: 40px;
+        font-family: opensans;
+        border-style: solid;
+        border-width: 2px;
+        border-bottom-width: 1px;
+        border-top-width: 1px;
+        border-color: #BACCD8;
+        border-radius: 6px;
+        padding: 10px;
+        background-color: #E8E6E3;
+        opacity: 0.9;
+        margin-bottom: 10px;
+        vertical-align: center;
+      }
+      .ui-state-default-act2{
+        width: 460px;
+        height: 80px;
+        font-family: opensans;
+        border-style: solid;
+        border-width: 2px;
+        border-bottom-width: 1px;
+        border-top-width: 1px;
+        border-color: #BACCD8;
+        border-radius: 6px;
+        padding: 10px;
+        background-color: #E8E6E3;
+        opacity: 0.9;
+        margin-bottom: 10px;
+        vertical-align: center;
+        
+      }
+      .ui-state-default-act3{
+        width: 460px;
+        height: 120px;
+        font-family: opensans;
+        border-style: solid;
+        border-width: 2px;
+        border-bottom-width: 1px;
+        border-top-width: 1px;
+        border-color: #BACCD8;
+        border-radius: 6px;
+        padding: 10px;
+        background-color: #E8E6E3;
+        opacity: 0.9;
+        margin-bottom: 10px;
+        vertical-align: center;
+      }
+      .ui-state-default-act4{
+        width: 460px;
+        height: 160px;
+        font-family: opensans;
+        border-style: solid;
+        border-width: 2px;
+        border-bottom-width: 1px;
+        border-top-width: 1px;
+        border-color: #BACCD8;
+        border-radius: 6px;
+        padding: 10px;
+        background-color: #E8E6E3;
+        opacity: 0.9;
+        margin-bottom: 10px;
+        vertical-align: center;
+      }
+      h3{
+        font-size: 18px;
+        vertical-align: middle;
+        color: #EE7600;
+        font-family: opensans;
+      }
+      p{
+        font-family: opensans;
+        font-size: 12px;
+        text-align: justify;
+      }
+      .rating {
+        float: right;
+        text-align: right;
+        color: black;
+      }
+      .entry{
+        vertical-align: middle;
+      }
+      #tabs{
+        height:630px;
+
+      }
+      .tabcont{
+        height: 550px;
+        overflow:scroll;
+
+      }
+      .budgetsymbol{
+        float: left;
+   
+      }
+      #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+      #sortable li { margin: 0 3px 3px 3px; padding: 5em; padding-left: 1.5em; font-size: 1.4em; height: 30px; }
+      #sortable li span { position: absolute; margin-left: -1.3em; }
+      
+</style>
+
+        <% dayplan = oneday() %>
+        <% for entry in dayplan %>
+        <% ratingsymbol = "";
+           ratingval = entry.rating;
+
+           if(ratingval == 1)
+            ratingsymbol = "★"
+           end
+           if(ratingval == 2)
+             ratingsymbol = "★★"
+           end
+           if(ratingval == 3)
+             ratingsymbol = "★★★"
+           end
+           if(ratingval == 4)
+             ratingsymbol = "★★★★"
+           end
+           if(ratingval == 5)
+             ratingsymbol = "★★★★★"
+           end
+
+           budgetsymbol = ""
+           budgetval = entry.budget
+
+           if(budgetval == "1")
+            budgetsymbol = "$"
+           end
+           if(budgetval == "2")
+             budgetsymbol = "$$"
+           end
+           if(budgetval == "3")
+             budgetsymbol = "$$$"
+           end
+         %>
+
+        <% if entry.time == 1 %> 
+            <%= content_tag :div, :class => "ui-state-default-act1" do %>
+           <div class="entry"> 
+           <h3><%= entry.name %><span class = "rating"><%= ratingsymbol %> </span></h3>
+<!--            <p><%= budgetsymbol %></p>  -->      
+          </div>
+          <% end %>
+        <% end %>
+        
+        <% if entry.time == 2 %> 
+          <%= content_tag :div, :class => "ui-state-default-act2" do %>
+           <div class="entry" id = ""> 
+           <h3><%= entry.name %><span class = "rating"><%= ratingsymbol %> </span></h3>
+          </div>
+          <% end %>
+        <% end %>
+
+        <% if entry.time == 3 %> 
+          <%= content_tag :div, :class => "ui-state-default-act3" do %>
+          <div class="entry"> 
+           <h3><%= entry.name %><span class = "rating"><%= ratingsymbol %> </span></h3>
+          </div>
+          <% end %>
+        <% end %>
+
+        <% if entry.time == 4 %> 
+          <%= content_tag :div, :class => "ui-state-default-act4" do %>
+          <div class="entry">         
+           <h3><%= entry.name %><span class = "rating"><%= ratingsymbol %> </span></h3>
+          </div>
+          <% end %>
+        <% end %>
+        <% end %>
+          </ul>
+        </div>
+      </div>
+

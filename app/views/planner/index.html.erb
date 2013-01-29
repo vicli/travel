@@ -1,66 +1,127 @@
   <head>
+
        <script >
   $(function() {
     $( "#tabs" ).tabs();
   });
   $(function() {
-    $( "#radio" ).buttonset();
+    $( "#radio" ).buttonset().find('label').width(60);
+  });
+
+  $(function() {
+    $( "#radiosize" ).buttonset().find('label').width(60);
   });
   $(function() {
-    $( "#radiosize" ).buttonset();
+    $( "#radioage" ).buttonset().find('label').width(60);
   });
   $(function() {
-    $( "#radioage" ).buttonset();
+    $( "#radioact" ).buttonset().find('label').width(60);
   });
   $(function() {
-    $( "#radioact" ).buttonset();
-  });
-  $(function() {
-    $( "#radiotour" ).buttonset();
+    $( "#radiotour" ).buttonset().find('label').width(60);
   });  
   $(function() {
-    $( "#sortable" ).sortable();
-    $( "#sortable" ).disableSelection();
+    $("#sortable1").sortable({
+    start: function(event, ui) {
+       var init = ui.item.index();
+    }
+});
+    $("#sortable1").sortable({
+    stop: function(event, ui) {
+        var fin = ui.item.index();
+    }
+});
+    $( "#sortable1" ).disableSelection();
+  });
+    $(function() {
+    $("#sortable2").sortable({
+    start: function(event, ui) {
+       var init = ui.item.index();
+    }
+});
+    $("#sortable2").sortable({
+    stop: function(event, ui) {
+        var fin = ui.item.index();
+    }
+});
+    $( "#sortable2" ).disableSelection();
+  });
+      $(function() {
+    $("#sortable3").sortable({
+    start: function(event, ui) {
+       var init = ui.item.index();
+    }
+});
+    $("#sortable3").sortable({
+    stop: function(event, ui) {
+        var fin = ui.item.index();
+    }
+});
+    $( "#sortable3" ).disableSelection();
+  });
+    $(function() {
+    $("#sortable4").sortable({
+    start: function(event, ui) {
+       var init = ui.item.index();
+    }
+});
+    $("#sortable4").sortable({
+    stop: function(event, ui) {
+        var fin = ui.item.index();
+    }
+});
+    $( "#sortable4" ).disableSelection();
+  });
+      $(function() {
+    $("#sortable5").sortable({
+    start: function(event, ui) {
+       var init = ui.item.index();
+    }
+});
+    $("#sortable5").sortable({
+    stop: function(event, ui) {
+        var fin = ui.item.index();
+    }
+});
+    $( "#sortable5" ).disableSelection();
   });
   function divScroll(){
     var Top = document.getElementById('timecolumn');
     var Bot = document.getElementById('tabcont');
     Top.scrollLeft = Bot.scrollLeft;
   }
-  $(function(){
-  $('input[type="radio"]').click(function(){
-    if ($(this).is(':checked'))
-    {
-      alert($(this).val());
-    }
-  });
-});
+
   $(function() {
     $( "#sortable" ).sortable({placeholder: "ui-state-highlight"});
     $( "#sortable" ).disableSelection();
   });
+
   </script>
     <style>
       body{
-        background: url('../assets/background2.png');
+        background: url('../assets/sand.png');
         background-size: cover;
         padding-top: 80px;
         font-family: opensans;
+        z-index: 100;
       }
-      h1{
 
-      }
       #timecolumn{
         background-color: #E1EEF4;
-        opacity: 0.75;
-        width: 60px;
-        height: 650px;
+        opacity: 0.85;
+        width: 40px;
+        height: 640px;
         padding: 10px;
         margin-left: -40px;
-        overflow:auto;
+        overflow:scroll;
         display: inline;
         float: left;
         border-radius: 10px;
+        overflow-y: hidden ! important;
+      }
+      #delete{
+        visibility: hidden;
+        display: none;
       }
       #itinerarycontainer{
         background-color: #E1EEF4;
@@ -71,6 +132,7 @@
         margin-left: 20px;
         display: inline;
         float: left;
+
         
         /*background-color: #F2F1D6;*/
         border-radius: 10px;
@@ -78,15 +140,15 @@
       }
       #togglecontainer{
         background-color: #E1EEF4;
-        opacity: 0.75;
-        width: 290px;
-        height: 220px;
+        opacity: 0.85;
+        width: 320px;
+        height: 360px;
         display: inline;
         margin-left: 20px;
         float: left;
         margin-right: -200px;
         border-radius: 10px;
-        padding: 20px 15px 15px 35px;
+        padding: 10px 15px 15px 35px;
       }
       .rowcont{
         width: 280px;
@@ -94,20 +156,22 @@
         display: inline;
         float: left;
       }
-      #cont{
+      .cont{
         float: left;
         display: inline;
+        margin-left: 100px;
+        color: #c77405;
+        margin-top: 10px;
       }
       #infocontainer{
         background-color: #E1EEF4;
-        opacity: 0.75;
-        width: 320px;
-        height: 365px;
+        opacity: 0.85;
+        width: 350px;
+        height: 230px;
         display: inline;
-        margin-left: 20px;
-        margin-top: 20px;
-        float: left;
-        margin-right: -100px;
+        margin-right: -20px;
+        margin-top: 40px;
+        float: right; 
         border-radius: 10px;
         padding: 10px 10px 10px 10px;
         overflow: hidden;
@@ -127,38 +191,55 @@
       
       .itheading{
         font-family: opensans;
-        
-        float:center;
-        font-size: 34px;
+        text-align: center;
+        font-size: 26px;
+        margin-left: -40px;
+        padding-top: 10px;
+        margin-bottom: -50px;
       }
       #toggleelement{
         display:inline;
         height: 35px;
       }
+
       #rightsec{
         width: 320px;
         display: inline;
       }
       #radio, #radiosize, #radioage, #radioact, #radiotour{
-        width: 250px;
+        width: 300px;
         height: 35px;  
         display: inline;
-        vertical-align:text-top;
+        vertical-align:center;
         padding:0;
         margin:0;
         //position:relative;
         //overflow:hidden;
       }
+
       #title{
         float:left; 
+        text-align: left;
+        vertical-align: center;
+        padding: 2px;
         display: inline;
         margin-right: 20px;
+        clear: both;
+        
+      }
+       #dayo{
+        float:left; 
+        text-align: left;
+        vertical-align: center;
+
+        clear: both;
         
       }
       #input{
-        float: left;
+        float: right;
         margin-left: 20px;
         display: inline;
+        margin-right: 20px;
         
       }
       #tabs{
@@ -167,25 +248,30 @@
       }
       .tabcont{
         height: 550px;
-        overflow:auto;
+        overflow:scroll;
 
       }
-      .timecell{
+      #timecell{
         font-family: opensans;
-        font-size: 22px;
-        margin-top: 60px;
-        padding: 10px;
-        height: 60px;
-        text-align: right;
+        padding: 5px;
+        height: 45px;
+        text-align: center;
+        font-size: 14px;
+        padding-top: 60px;
+        margin-bottom: 2px;
       }
       .timecell{
         font-family: opensans;
-        padding: 10px;
-        height: 60px;
-        text-align: left;
+        padding: 5px;
+        height: 45px;
+        text-align: center;
+        font-size: 14px;
+         margin-bottom: 2px;
+
       }
-      .ui-state-default-act{
+      .ui-state-default-act1{
         width: 460px;
+        height: 60px;
         font-family: opensans;
         border-style: solid;
         border-width: 2px;
@@ -198,15 +284,97 @@
         opacity: 0.9;
         margin-bottom: 10px;
       }
-      .ui-state-default-act h3{
-        font-size: 18px;
-        color: #1C1C1C;
+      .ui-state-default-act2{
+        width: 460px;
+        height: 120px;
+        font-family: opensans;
+        border-style: solid;
+        border-width: 2px;
+        border-bottom-width: 1px;
+        border-top-width: 1px;
+        border-color: #BACCD8;
+        border-radius: 6px;
+        padding: 10px;
+        background-color: #E8E6E3;
+        opacity: 0.9;
+        margin-bottom: 10px;
       }
-      .ui-button{
+      .ui-state-default-act3{
+        width: 460px;
+        height: 180px;
+        font-family: opensans;
+        border-style: solid;
+        border-width: 2px;
+        border-bottom-width: 1px;
+        border-top-width: 1px;
+        border-color: #BACCD8;
+        border-radius: 6px;
+        padding: 10px;
+        background-color: #E8E6E3;
+        opacity: 0.9;
+        margin-bottom: 10px;
+      }
+      .ui-state-default-act4{
+        width: 460px;
+        height: 240px;
+        font-family: opensans;
+        border-style: solid;
+        border-width: 2px;
+        border-bottom-width: 1px;
+        border-top-width: 1px;
+        border-color: #BACCD8;
+        border-radius: 6px;
+        padding: 10px;
+        background-color: #E8E6E3;
+        opacity: 0.9;
+        margin-bottom: 10px;
+      }
+      .ui-state-default-act1 h3 {
+        font-size: 18px;
+        color: #EE7600;
+        font-family: opensans;
+      }
+      .ui-state-default-act2 h3 {
+        font-size: 18px;
+        color: #EE7600;
+        font-family: opensans;
+      }.ui-state-default-act3 h3 {
+        font-size: 18px;
+        color: #EE7600;
+        font-family: opensans;
+      }.ui-state-default-act4 h3 {
+        font-size: 18px;
+        color: #EE7600;
+
+      }
+
+      .ui-state-default-act1 p{
+        font-family: opensans;
+        font-size: 12px;
+        text-align: justify;
+      }
+      .ui-state-default-act2 p{
+        font-family: opensans;
+        font-size: 12px;
+        text-align: justify;
+      }
+      .ui-state-default-act3 p{
+        font-family: opensans;
+        font-size: 12px;
+        text-align: justify;
+      }
+      .ui-state-default-act4 p{
+        font-family: opensans;
+        font-size: 12px;
+        text-align: justify;
+      }
+
+      .cont .ui-button{
         border-radius: 6px;
         font-family: opensans;
         background-color: white;
         opacity: 0.75;
+        color: #c77405;
       }
       #changebut{
         display: inline;
@@ -216,128 +384,300 @@
         color: black;
 
       }
+
+      .name{
+        display: inline;
+        margin-right: 20px;
+      }
+      .budgetsymbol{
+        float: left;
+   
+      }
+      #add_tab{
+        float: right;
+        display:inline;
+        margin-right: 20px;
+        margin-top: 10px;
+        height: 30px;
+        width: 30px;
+        border-radius: 3px;
+        font-size: 26px;
+        background-color: white;
+        border-width:0px;
+
+      }
+      #cityselect{
+        width: 150px;
+        display: inline-block;
+        float:left;
+        margin-top: 40px;
+        margin-left: 70px;
+        margin-bottom: 20px;
+
+      }
+      #cityselect{
+        width: 150px;
+        display: inline-block;
+        float:left;
+
+
+      }
+      .wrapper-dropdown-3 {
+    /* Size and position */
+    position: relative;
+    width: 300px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-left: 50px;
+    opacity: 0.85;
+    float: left;
+ 
+    /* Styles */
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+ 
+    /* Font settings */
+
+    font-family: opensans;
+    text-align: center;
+    font-size: 18px;
+    color: #8AA8BD;
+}
+
       #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-      #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 30px; }
+      #sortable li { margin: 0 3px 3px 3px; padding: 5em; padding-left: 1.5em; font-size: 1.4em; height: 30px; }
       #sortable li span { position: absolute; margin-left: -1.3em; }
 
-    </style>
-    <h2 class = "itheading">this is your itinerary for your <script type="text/javascript">document.write('city');</script>trip</h2>
-  </head>
-  
-  <body>
+      #sortable2 { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+      #sortable2 li { margin: 0 3px 3px 3px; padding: 5em; padding-left: 1.5em; font-size: 1.4em; height: 30px; }
+      #sortable2 li span { position: absolute; margin-left: -1.3em; }
 
-    <div id ="timecolumn">
-      <div class="timecell"> 9:00</div>
+      #sortable3 { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+      #sortable3 li { margin: 0 3px 3px 3px; padding: 5em; padding-left: 1.5em; font-size: 1.4em; height: 30px; }
+      #sortable3 li span { position: absolute; margin-left: -1.3em; }
+
+      #sortable4 { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+      #sortable4 li { margin: 0 3px 3px 3px; padding: 5em; padding-left: 1.5em; font-size: 1.4em; height: 30px; }
+      #sortable4 li span { position: absolute; margin-left: -1.3em; }
+
+      #sortable5 { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+      #sortable5 li { margin: 0 3px 3px 3px; padding: 5em; padding-left: 1.5em; font-size: 1.4em; height: 30px; }
+      #sortable5 li span { position: absolute; margin-left: -1.3em; }
+
+      #tab2{
+        
+      }
+      #tab3{
+      }
+      #tab4{
+      }
+      #tab5{
+      }
+
+
+/*      .overlay {
+   position: absolute;
+   top: 100;
+   z-index: 5000;
+   left: 100;
+   max-width: 600px;
+}*/
+    </style>
+
+    <script type="text/javascript">
+
+
+
+
+      var str = "hi";
+      function showValues() {
+     //    var valuesToSubmit = $("form").serialize();
+     //  $.ajax({
+     //    url: default, //sumbits it to the given url of the form
+     //    data: valuesToSubmit,
+     //    dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
+     //  }).success(function(json){
+     //    alert("yayy");
+     //  });
+     // return false
+         var str = $("form").serialize();
+         var strarry = str.split(/[&=]/);
+         var numberdays = strarry[3];
+         $.ajax({
+          url: '/test',
+          data: str,
+          type:'GET',
+          // beforeSend: function(){
+          //   $('#loading').show();
+          // },
+
+          // complete: function(){
+          //   $('#loading').hide();
+          // },
+          success: function(data){
+            if (numberdays == 'd1'){
+               $("#sortable1").html(data);
+            }
+            if (numberdays == 'd2'){
+               $("#sortable2").html(data);
+            }
+            if (numberdays == 'd3'){
+               $("#sortable3").html(data);
+            }
+            if (numberdays == 'd4'){
+               $("#sortable4").html(data);
+            }
+            if (numberdays == 'd5'){
+               $("#sortable5").html(data);
+            }
+           
+          }
+          })
+      };
+
+      $(function(){
+        $('.tabcont').scroll(function(){
+          $('#timecolumn').scrollTop($(this).scrollTop());
+        });
+      });
+
+    
+    </script>
+  <br/>
+  <br/>
+<!-- <div class = "overlay"><img src="../assets/overlay.png"/></div> -->
+  <body>
+    <div id = "body">
+          <div id ="timecolumn">
+      <div id="timecell">   9:00</div>
       <div class="timecell"> 10:00</div>
       <div class="timecell"> 11:00</div>
       <div class="timecell"> 12:00</div>
-      <div class="timecell"> 1:00</div>
+      <div class="timecell">  1:00</div>
+      <div class="timecell"> 2:00</div>
+      <div class="timecell"> 3:00</div>
+      <div class="timecell"> 4:00</div>
+      <div class="timecell"> 5:00</div>
+      <div class="timecell"> 6:00</div>
+      <div class="timecell"> 7:00</div>
+      <div class="timecell"> 8:00</div>
+      <div class="timecell"> 9:00</div>
+      <div class="timecell"> 10:00</div>
+      <div class="timecell"> 11:00</div>
     </div>
+
     <div id ="itinerarycontainer">
-          <div id="tabs">
-  <ul>
-    <li><a href="#tabs-1">Day 1</a></li>
-    <li><a href="#tabs-2">Day 2</a></li>
-  </ul>
-  <div id="tabs-1">
-    <div class="tabcont" onscroll="divScroll();">
-      <ul id = "sortable">
-        <% @restaurants.each do |restaurant| %>
-          <%= content_tag :div, :class => "ui-state-default-act" do %>
-             <div class="entry"> 
-            <h3><%= restaurant.name %></h3>
-            // <script type="text/javascript">
-            //   var ratingsymbol = "0";
-            //   var ratingval = "<%= restaurant.rating %>";
 
-            //   if(ratingval == 1){
-            //    ratingsymbol = "★";
-            //   }
-            //   else if(ratingval == 2){
-            //     ratingsymbol = "★★";
-            //   }
-            //   else if(ratingval == 3){
-            //     ratingsymbol = "★★★";
-            //   }
-            //   else if(ratingval == 4){
-            //     ratingsymbol = "★★★★";
-            //   }
-            //   else if(ratingval == 5){
-            //     ratingsymbol = "★★★★★";
-            //   }
-            //   document.write(ratingsymbol.toString());
-            // </script>
+      <div id="tabs">
+        <ul>
+          <li id= "tab1"><a href="#tabs-1">Day 1</a></li>
+          <li id= "tab2"><a href="#tabs-2">Day 2</a></li>
+          <li id= "tab3"><a href="#tabs-3">Day 3</a></li>
+          <li id= "tab4"><a href="#tabs-4">Day 4</a></li>
+          <li id= "tab5"><a href="#tabs-5">Day 5</a></li>
+        </ul>
+      <div id="tabs-1">
+          <ul id = "sortable">
 
-            // <script type="text/javascript">
-            //   var budgetsymbol = "0";
-            //   var budgetval = "<%= restaurant.budget %>";
+          </ul>
+      </div>
 
-            //   if(budgetval == 1){
-            //    budgetsymbol = "$";
-            //   }
-            //   else if(budgetval == 2){
-            //     budgetsymbol = "$$";
-            //   }
-            //   else if(budgetval == 3){
-            //     budgetsymbol = "$$$";
-            //   }
-            //   document.write(budgetsymbol.toString());
-            // </script>
-            <p><%=sanitize restaurant.description %></p>
+      <div id = "tabs-2">
+          <ul id = "sortable2">
 
-          </div>
-      <% end %>
-      <% end %>
-      </ul>
+          </ul>
+      </div>
+
+      <div id = "tabs-3">
+          <ul id = "sortable3">
+
+          </ul>
+      </div>
+
+      <div id = "tabs-4">
+          <ul id = "sortable4">
+
+          </ul>
+      </div>
+
+      <div id = "tabs-5">
+          <ul id = "sortable5">
+
+          </ul>
+      </div>
+
+      </div>      
     </div>
-  </div>
 
-  <div id="tabs-2">
-    <p>
-      test..
-    </p>
-  </div>
-</div>
-      
-    </div>
+
     <div id = "rightsec">
-    <div id= "togglecontainer">
-      <form name = "toggleform"> 
-      <div class="rowcont">        
-        <div id="radio" name = "budgettog">
-          <div id="title">
-            <label>Budget</label> 
-          </div>  
-          <div id="input">  
-            <input type="radio" id="radio1" value = "b1" name="budget" /><label for="radio1">$</label>
-            <input type="radio" id="radio2" value = "b2"name="budget" checked="checked" /><label for="radio2">$$</label>
-            <input type="radio" id="radio3" value = "b3"name="budget" /><label for="radio3">$$$</label> 
-          </div>          
-         </div>
-         </div>
+      <div id= "togglecontainer">
+        <div>
+          <form name ="toggleform">
+        <h2 class = "itheading">destination:</h2></div>
+        <p><select name='city' onchange = "showValues()" id = "cityselect" class = "wrapper-dropdown-3">
+<!--           <option> Please select... </option> -->
+          <option value= "boston"><a> Boston </a></option>
+          <option value= "newyork"><a> New York City </a></option>
+          <option value="sanfran"><a> San Francisco </a></option>
+        </select></p>
 
+      </form>
+      <form name ="toggleform">
+
+      </form>
+        <div class="form_row">
+          <form name = "toggleform">   
+          <br/>   
+          <br/> 
+          <br/> 
+          <br/> 
+          <br/> 
+          <div id = "dayo" style = "float:left">
+          <select name='num_days' onchange = "showValues()" id = "dayselect" STYLE="width: 180px; margin-top: 5px; margin-left:120px; float:left">
+          
+          <option value= "d2"><a> 2 </a></option>
+          <option value= "d3"><a> 3 </a></option>
+          <option value="d4"><a> 4 </a></option>
+          <option value="d5"><a> 5 </a></option>
+        </select>
+      </div>
+            <div id="radio" name = "budgettog" onchange = "showValues()">
+              <div id="title">
+                <label>Budget</label> 
+              </div>  
+              <div id="input">  
+                <input type="radio" id="radio1" value = "b1" name="budget" onclick ="showValues()" /><label for="radio1">$</label>
+                <input type="radio" id="radio2" value = "b2" name="budget" onclick ="showValues()"/><label for="radio2">$$</label>
+                <input type="radio" id="radio3" value = "b3" name="budget" onclick ="showValues()"/><label for="radio3">$$$</label> 
+              </div>          
+            </div>
       <br />
-
         <div id="radiosize" name = "sizetog">
           <div id="title">
             <label>Size</label>
           </div>
-        <div id="input">
-          <input type="radio" id="radio4" value = "g1" name="size" /><label for="radio4">웃</label>
-          <input type="radio" id="radio5" value = "g2" name="size" checked="checked" /><label for="radio5">웃웃</label>
-          <input type="radio" id="radio6" value = "g3" name="size" /><label for="radio6">웃웃웃+</label>
+          <!-- 웃 -->
+          <div id="input">
+            <input type="radio" id="radio4" value = "g1" name="size" onclick ="showValues()"/><label for="radio4">1</label>
+            <input type="radio" id="radio5" value = "g2" name="size" onclick ="showValues()" /><label for="radio5">2</label>
+            <input type="radio" id="radio6" value = "g3" name="size" onclick ="showValues()"/><label for="radio6">3+</label>
+          </div>
         </div>
-        </div>
-
       <br />
         <div id="radioage" name = "agetog">
           <div id="title">
             <label>Age</label>
           </div>
           <div id="input">
-          <input type="radio" id="radio7" value = "a1" name="age" /><label for="radio7">18-30</label>
-          <input type="radio" id="radio8" value = "a2" name="age" checked="checked" /><label for="radio8">30-50</label>
-          <input type="radio" id="radio9" value = "a3" name="age" /><label for="radio9">50+</label>
+          <input type="radio" id="radio7" value = "a1" name="age" onclick ="showValues()"/><label for="radio7"><30</label>
+          <input type="radio" id="radio8" value = "a2" name="age" onclick ="showValues()"  /><label for="radio8"><50</label>
+          <input type="radio" id="radio9" value = "a3" name="age" onclick ="showValues()"/><label for="radio9">50+</label>
         </div>
 
       </div>
@@ -348,9 +688,9 @@
             <label>Activity Level</label>
           </div>
           <div id="input">
-          <input type="radio" id="radio10" value = "l1" name="activity" /><label for="radio10">L</label>
-          <input type="radio" id="radio11" value = "l2" name="activity" checked="checked" /><label for="radio11">M</label>
-          <input type="radio" id="radio12" value = "l3" name="activity" /><label for="radio12">H</label>
+          <input type="radio" id="radio10" value = "l1" name="activity" onclick ="showValues()"/><label for="radio10">L</label>
+          <input type="radio" id="radio11" value = "l2" name="activity" onclick ="showValues()"  /><label for="radio11">M</label>
+          <input type="radio" id="radio12" value = "l3" name="activity" onclick ="showValues()"/><label for="radio12">H</label>
         </div>
         </div>
 
@@ -361,23 +701,17 @@
           <label>Touristiness</label>
         </div>
         <div id="input">
-          <input type="radio" id="radio13" value = "t1" name="tourist" /><label for="radio13">L</label>
-          <input type="radio" id="radio14" value = "t2" name="tourist" checked="checked" /><label for="radio14">M</label>
-          <input type="radio" id="radio15" value = "t3" name="tourist" /><label for="radio15">H</label>
+          <input type="radio" id="radio13" value = "t1" name="tourist" onclick ="showValues()"/><label for="radio13">L</label>
+          <input type="radio" id="radio14" value = "t2" name="tourist" onclick ="showValues()" /><label for="radio14">M</label>
+          <input type="radio" id="radio15" value = "t3" name="tourist" onclick ="showValues()"/><label for="radio15">H</label>
         </div>
         </div>
-      </div>
-
-      <div class = 'cont'>
-      <input type="submit" class = "ui-button" value="Change">
-    </div>
       </form>
       </div>
-    <div id= "infocontainer">
+    <div id= "infocontainer" ondblclick= "clicked()">
     </div>
   </div>
-
- 
-
-    
+</div>
+    </div>
   </body>
+

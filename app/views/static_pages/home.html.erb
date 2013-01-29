@@ -215,7 +215,6 @@
         border-radius: 6px;
         font-family: opensans;
         background-color: white;
-        opacity: 0.75;
         text-decoration: none;
         &:hover {
     		color: white;
@@ -224,71 +223,32 @@
   }
 
       }
+.buttoncont {
+    text-align: center;
+    margin-top: 300px;
+}
+
+.buttag {
+    text-decoration: none;
+
+    border-radius: 5px;
+    box-shadow: 0 1px 0px rgba(255,255,255,0.1) inset, 0 0px 5px rgba(0,0,0,0.7);
+    font-size: 28px;
+    background: rgba(0,0,0,0.7); /* #191919 */
+    border: 1px solid #141414;
+    padding: 5px 80px 5px 80px;
+}
+.buttoncont:active, .buttoncont:focus {
+    box-shadow: 0 0 0 transparent inset;
+}
+
+.buttag:hover {
+    background: rgba(0,0,0,0.4); /* #101010 */
+    text-decoration: none;
+    color: #822222;
+}
 </style>
-<script type="text/javascript">
-	var city = '';
-</script>
 
-<script type="text/javascript">
-
-	function DropDown(el) {
-    	this.dd = el;
-    	this.placeholder = this.dd.children('span');
-    	this.opts = this.dd.find('ul.dropdown > li');
-    	this.val = '';
-    	this.index = -1;
-    	this.initEvents();
-	}
-
-DropDown.prototype = {
-    initEvents : function() {
-        var obj = this;
- 
-        obj.dd.on('click', function(event){
-            $(this).toggleClass('active');
-            return false;
-        });
- 
-        obj.opts.on('click',function(){
-            var opt = $(this);
-            obj.val = opt.text();
-            obj.index = opt.index();
-            obj.placeholder.text(obj.val);
-        });
-    },
-    getValue : function() {
-        return this.val;
-    },
-    getIndex : function() {
-        return this.index;
-    }
-};
-
-    $(function(){
-    	var dd= new DropDown( $('#dd'));
-
-    	$(document).click(function(){
-    		$('.wrapper-dropdown-3').removeClass('active');
-    	});
-
-    });
-    $(function(){
-    	var dd= new DropDown( $('#dd2'));
-
-    	$(document).click(function(){
-    		$('.wrapper-dropdown-3').removeClass('active');
-    	});
-
-    });
-    function save_data(){
-    	arrayOfLines = $("#dd").text().match(/[^\r\n]+/g);	
-    	arrayOfLines2 = $("#dd2").text().match(/[^\r\n]+/g);		
-		city = arrayOfLines[0].replace(/\s+/g, ' ');
-		theme = arrayOfLines2[0].replace(/\s+/g, ' ');
-    };
-  	
-
-</script>
 
 <body>
 
@@ -296,49 +256,20 @@ DropDown.prototype = {
 <!-- <p id = "main">onboard</p> -->
 <div class ="introunit">
 	<p class = "firstline"> going somewhere? </p>
+    <br/>
 	<span style="padding-left: 140px">get <span style ="font-size:100px">onBoard</span> </span>
 	<br/>
 	<br/>
-	<p><span id="thirdline"> your <em>dream</em> vacation in just <span style="color:#822222;"><strong>5 clicks</strong></span></span></p>
+	<p><span id="thirdline"> your <em>dream</em> vacation in just <span style="color:#822222;"><strong><em> clicks</em></strong></span></span></p>
 </div>	
-<br/>
-<div class = 'centeredunits'>
-	<form>
-	<select id="dd" class="wrapper-dropdown-3" type = "select" tabindex="1" name = "city">
 
-        		<option><a href="#">Boston</a></option>
-        		<option><a href="#">New York City</a></option>
-        		<option><a href="#">San Francisco</a></option>
-    	
-	</select>
-
-	<select id="dd2" class="wrapper-dropdown-3" tabindex="1">
-    	<span>theme</span>
-    		<ul class="dropdown">
-        		<option><a href="#">Laidback Getaway</a></option>
-        		<option><a href="#">Sexy Escape</a></option>
-        		<option><a href="#">Nature Lover</a></option>
-        		<option><a href="#">Spring Break</a></option>
-        		<option><a href="#">Family Fun</a></option>
-    		</ul>
-	</select>
-</form>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	
 <!-- <div id= "home-start-button"><%= link_to "Let's go!", 'planner', class: "btn btn-large btn-primary" %>
 </div> -->
 <br/>
-<%= button_to "go", 'planner', :method => "get", class: "cusbutton", type: "submit"%>
-<!-- <form action="/planner">
-<input type = "button" class = "ui-button" onclick="change_city();" value ="go!">
-</form> -->
+<div class = "buttoncont">
+    <a href="/planner" class = "buttag">GO </a>
+</div>
+
 </div>
 
 </div>

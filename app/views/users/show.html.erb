@@ -3,18 +3,53 @@ body{
   background: url('../assets/background2.png');
   background-size: cover;
 }
+
+.span4 h1{
+  font-size: 30px;
+  padding-top: 50px;
+  margin-left: 120px;
+  text-align: center;
+}
+.heading{
+  color:#EE7600;
+}
+#info{
+  margin-top: 30px;
+  margin-left: 120px;
+  border-radius: 10px;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  opacity: 0.8;
+  padding: 15px;
+  text-align: center;
+  vertical-align: center;
+  float: left;
+}
+#trips{
+  margin-top: 30px;
+  margin-left: 120px;
+  border-radius: 10px;
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  opacity: 0.8;
+  padding: 15px;
+  text-align: center;
+  float:left;
+  display: inline;
+
+}
+
+
 </style>
 
 <% provide(:title, @user.name) %>
-<div class="row">
-	<aside class="span4">
-		<section>
+<div id = "info">
 			<h1>
-	<%= gravatar_for @user %>
 	<%= @user.name %></h1>
-</section>
-</aside>
-</div>
+
+
 <p>
   <b>Name:</b>
   <%= @user.name %>
@@ -25,7 +60,10 @@ body{
   <%= @user.login %>
 </p>
 
-
-
+<br/>
 <%= link_to 'Edit', edit_user_path(@user) %> 
+</div>
 
+<div id="trips">
+  <h1> My Trips </h1>
+</div>

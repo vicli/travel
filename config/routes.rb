@@ -5,7 +5,7 @@ Travel::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   root to:'static_pages#home'
 
-
+  match '/test', to:'planner#update'
   match '/about', to:'static_pages#about'
   match '/home', to:'static_pages#home'
   match '/planner', to:'planner#index'
