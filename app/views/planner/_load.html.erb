@@ -122,10 +122,9 @@ $(function() {
       
 </style>
 
-        <% dayplan = oneday() %>
-        <% for entry in dayplan %>
+        <% for entry in @fulldays %>
         <% ratingsymbol = "";
-           ratingval = entry.rating;
+           ratingval = entry.rating
 
            if(ratingval == 1)
             ratingsymbol = "★"

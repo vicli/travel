@@ -1,35 +1,35 @@
 module PlannerHelper
 	def oneday()
-      activitieslist = @activities
-      drestlist = @drestaurants 
-      lrestlist = @lrestaurants 
-      ashortlist = activitieslist.take(30) 
-      lshortlist = lrestlist.take(15)
-      dshortlist = drestlist.take(15)
+      actlist = @activitieslist
+      llist = @lrestlist
+      dlist = @drestlist
+      ashortlist = actlist.take(50) 
+      lshortlist = llist.take(25)
+      dshortlist = dlist.take(25)
       daylist = []
       for activity in ashortlist.sample(1)
         ashortlist.delete(activity)  
-        activitieslist.delete(activity)
+        actlist.delete(activity)
         daylist.push(activity) 
       end
       for restaurant in lshortlist.sample(1)
         lshortlist.delete(restaurant)  
-        lrestlist.delete(restaurant)
+        llist.delete(restaurant)
         daylist.push(restaurant) 
       end
       for activity in ashortlist.sample(2)
         ashortlist.delete(activity)  
-        activitieslist.delete(activity)
+        actlist.delete(activity)
         daylist.push(activity) 
       end
       for restaurant in dshortlist.sample(1)
         dshortlist.delete(restaurant)  
-        drestlist.delete(restaurant)
+        dlist.delete(restaurant)
         daylist.push(restaurant) 
       end
       for activity in ashortlist.sample(2)
         ashortlist.delete(activity)  
-        activitieslist.delete(activity)
+        actlist.delete(activity)
         daylist.push(activity) 
       end
 

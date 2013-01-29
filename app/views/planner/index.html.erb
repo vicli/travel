@@ -21,17 +21,17 @@
     $( "#radiotour" ).buttonset().find('label').width(60);
   });  
   $(function() {
-    $("#sortable1").sortable({
+    $("#sortable").sortable({
     start: function(event, ui) {
        var init = ui.item.index();
     }
 });
-    $("#sortable1").sortable({
+    $("#sortable").sortable({
     stop: function(event, ui) {
         var fin = ui.item.index();
     }
 });
-    $( "#sortable1" ).disableSelection();
+    $( "#sortable" ).disableSelection();
   });
     $(function() {
     $("#sortable2").sortable({
@@ -520,22 +520,22 @@
           //   $('#loading').hide();
           // },
           success: function(data){
-            if (numberdays == 'd1'){
-               $("#sortable1").html(data);
-            }
-            if (numberdays == 'd2'){
-               $("#sortable2").html(data);
-            }
-            if (numberdays == 'd3'){
-               $("#sortable3").html(data);
-            }
-            if (numberdays == 'd4'){
-               $("#sortable4").html(data);
-            }
-            if (numberdays == 'd5'){
-               $("#sortable5").html(data);
-            }
-           
+            // if (numberdays == 'd1'){
+               
+            // }
+            // if (numberdays == 'd2'){
+            //    $("#sortable2").html(data);
+            // }
+            // if (numberdays == 'd3'){
+            //    $("#sortable3").html(data);
+            // }
+            // if (numberdays == 'd4'){
+            //    $("#sortable4").html(data);
+            // }
+            // if (numberdays == 'd5'){
+            //    $("#sortable5").html(data);
+            // }
+           $("#sortable").html(data);
           }
           })
       };
@@ -577,9 +577,9 @@
         <ul>
           <li id= "tab1"><a href="#tabs-1">Day 1</a></li>
           <li id= "tab2"><a href="#tabs-2">Day 2</a></li>
-          <li id= "tab3"><a href="#tabs-3">Day 3</a></li>
+         <!--  <li id= "tab3"><a href="#tabs-3">Day 3</a></li>
           <li id= "tab4"><a href="#tabs-4">Day 4</a></li>
-          <li id= "tab5"><a href="#tabs-5">Day 5</a></li>
+          <li id= "tab5"><a href="#tabs-5">Day 5</a></li> -->
         </ul>
       <div id="tabs-1">
           <ul id = "sortable">
@@ -593,7 +593,7 @@
           </ul>
       </div>
 
-      <div id = "tabs-3">
+     <!--  <div id = "tabs-3">
           <ul id = "sortable3">
 
           </ul>
@@ -609,7 +609,7 @@
           <ul id = "sortable5">
 
           </ul>
-      </div>
+      </div> -->
 
       </div>      
     </div>
@@ -641,10 +641,10 @@
           <div id = "dayo" style = "float:left">
           <select name='num_days' onchange = "showValues()" id = "dayselect" STYLE="width: 180px; margin-top: 5px; margin-left:120px; float:left">
           
-          <option value= "d2"><a> 2 </a></option>
-          <option value= "d3"><a> 3 </a></option>
-          <option value="d4"><a> 4 </a></option>
-          <option value="d5"><a> 5 </a></option>
+          <option value= "2"><a> 2 </a></option>
+          <option value= "3"><a> 3 </a></option>
+          <option value="4"><a> 4 </a></option>
+          <option value="5"><a> 5 </a></option>
         </select>
       </div>
             <div id="radio" name = "budgettog" onchange = "showValues()">

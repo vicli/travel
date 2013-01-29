@@ -1,3 +1,4 @@
+include PlannerHelper
 class PlannerController < ApplicationController
   helper:all
   def index
@@ -20,6 +21,19 @@ class PlannerController < ApplicationController
     @lrestaurants = Restaurant.lsearching(b,g,a,l,t,loc)
     @drestaurants = Restaurant.dsearching(b,g,a,l,t,loc)
     @activities = Activity.searching(b,g,a,l,t,loc)
+    @activitieslist = @activities
+    @drestlist = @drestaurants 
+    @lrestlist = @lrestaurants 
+
+    @day1 = oneday()
+    @day2 = oneday()
+
+    @fulldays = @day1 + @day2
+
+
+    # for i in num_days
+    #   @fulldays = @fulldays+ oneday()
+    # end
     activitieslist = @activities
     drestlist = @drestaurants 
     lrestlist = @lrestaurants 
