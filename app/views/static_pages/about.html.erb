@@ -1,6 +1,6 @@
 <% provide(:title, 'About Us') %>
 <style type="text/css">
-	body{
+    body{
         background: url('../assets/background2.png');
         background-size: cover;
         opacity: 0.4px;
@@ -10,89 +10,111 @@
         padding-bottom: 120px;
       }
     .uscont{
-    	background-color: white;
-    	width: 200px;
-    	height: 400px;
+        background-color: white;
+        width: 200px;
+        height: 400px;
     }
     #about1{
-    	background-image: url("../assets/vic.png");
-    	background-size: cover;
-    	border-radius: 10px;
-    	border-style: solid;
-    	width: 100px;
-    	height: 100px;
-    	display: inline-block;
-    	margin-left: 200px;
-    	margin-top: 50px;
+        background-image: url("../assets/vic.png");
+        background-size: cover;
+        border-radius: 10px;
+        border-style: solid;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        margin-left: 200px;
+        margin-top: 50px;
 
     }
     #about2{
-    	background-image: url("../assets/nitya.png");
-    	background-size: cover;
-    	border-radius: 10px;
-    	border-style: solid;
-    	width: 100px;
-    	height: 100px;
-    	display: inline-block;
-    	margin-left: 120px;
-    	margin-top: 50px;
+        background-image: url("../assets/nitya.png");
+        background-size: cover;
+        border-radius: 10px;
+        border-style: solid;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        margin-left: 120px;
+        margin-top: 50px;
 
     }
     #about3{
-    	background-image: url("../assets/anubhav.png");
-    	background-size: cover;
-    	border-radius: 10px;
-    	border-style: solid;
-    	width: 100px;
-    	height: 100px;
-    	display: inline-block;
-    	margin-left: 120px;
-    	margin-top: 50px;
+        background-image: url("../assets/anubhav.png");
+        background-size: cover;
+        border-radius: 10px;
+        border-style: solid;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        margin-left: 120px;
+        margin-top: 50px;
 
     }
     #abouttext1{
-    	border-radius: 5px;
-    	padding-top: 10px;
-    	width: 100px;
-    	height: 100px;
-    	display: inline-block;
-    	margin-left: 120px;
-    	text-align: center;
-    	line-height: 13px;
-    	padding-left: 80px;
+        border-radius: 5px;
+        padding-top: 10px;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        margin-left: 120px;
+        text-align: center;
+        line-height: 13px;
+        padding-left: 80px;
 
     }
     .abouttext{
-    	border-radius: 5px;
-    	padding-top: 10px;
-    	width: 100px;
-    	height: 100px;
-    	display: inline-block;
-    	margin-left: 130px;
-    	text-align: center;
-    	line-height: 13px;
+        border-radius: 5px;
+        padding-top: 10px;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        margin-left: 130px;
+        text-align: center;
+        line-height: 13px;
 
     }
+    .descriptions
+    {
+        font-size: 12px;
+        color:black;
+    }
     img{
-    	max-width: 100%;
-    	max-height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    #about{
+        font-family: opensans
+        font-size: 14px;
+        width: 600px;
+        margin:0 auto;
+        text-align: center;
     }
 
 </style>
 
 <h1 >About onBoard</h1>
+<div id="contents">
+    <div id = "about">
+        Life moves fast. You hardly have enough time to sleep, let alone travel the world. We understand. But sometimes, all you need is one day, one place, one click.
+        onBoard is for the unexpected travelers, the spontaneous days, and the college procrastinators. It gives you an itinerary that you can instantly tailor to your personal needs -- who says a day can't be a vacation? 
+        <br/>
+        <br/>
+        For that one day where you happen to be somewhere with no plans at all, all it takes is <em>one click</em> to get onboard.  
+    </div>
+
+    <p style= "text-align:center; font-size:16px; margin-top: 50px"> created by </p>
+    
 <div id="uscont">
-	<div id ="about1">	
-	</div>
-	<div id ="about2">
-	</div>
-	<div id ="about3">
-	</div>
-</div>
-<div>
-	<div id = "abouttext1"><p><span style="font-size: 18px">Victoria <br/>Li</span></p><br/> <p>Token frat boy awwwwwwyeh </p></div>
-	<div class = "abouttext"><p><span style="font-size: 18px">Nitya Subramanian</span></p> <br/><p>I'm a badass motherf*cker </p></div>
-	<div class = "abouttext"><p><span style="font-size: 18px">Anubhav Jain</span></p> <br/><p>Noob frosh with a noob photo</p></div>
-</div>
 
-
+    <div id ="about1">  
+    </div>
+    <div id ="about2">
+    </div>
+    <div id ="about3">
+    </div>
+</div>
+</div>
+    <div id = "abouttext1"><p><span style="font-size: 14px">Victoria <br/>Li</span></p><br/> <p class="descriptions">Token frat boy awwwwwwyeh </p></div>
+    <div class = "abouttext"><p><span style="font-size: 14px">Nitya Subramanian</span></p> <br/><p class="descriptions">Down to party all night erry night</p></div>
+    <div class = "abouttext"><p><span style="font-size: 14px">Anubhav Jain</span></p> <br/><p class="descriptions">Noob frosh with a noob photo</p></div>
+</div>

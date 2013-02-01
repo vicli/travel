@@ -37,7 +37,7 @@ class Restaurant < ActiveRecord::Base
     @lrestaurants = eval ("Restaurant." + "lunch." + b + "." + g + "." + a + "." + l + "." + t + "." + loc)
   #@restaurants = Restaurant.rate
   end
-  def self.dsearching(b,g,a,l,t, loc)
+  def self.dsearching(b,g,a,l,t,loc)
     @drestaurants = eval ("Restaurant." + "dinner." + b + "." + g + "." + a + "." + l + "." + t + "." + loc)
   #@restaurants = Restaurant.rate
   end
@@ -45,6 +45,25 @@ class Restaurant < ActiveRecord::Base
 end
 
 require 'csv'
+    CSV.foreach('app/assets/sforest.csv',  "r:ISO-8859-1") do |row|
+        record = Restaurant.new(
+            :name   => row[0], 
+            :category => row[1],
+            :description => row[11],
+            :info_url => row[3],
+            :time => row[4],
+            :size => row[5],
+            :activity => row[6],
+            :budget => row[7],
+            :age => row[8],
+            :tourist => row[9],
+            :rating => row[10],
+            :tag => row[11],
+            :location => row[12]
+        )
+        record.save!
+    end
+
     CSV.foreach('app/assets/nycrestaurant.csv',  "r:ISO-8859-1") do |row|
         record = Restaurant.new(
             :name   => row[0], 
@@ -82,6 +101,7 @@ require 'csv'
         )
         record.save!
     end
+
 
 # require 'csv-mapper'
 

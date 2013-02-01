@@ -8,7 +8,7 @@ class PlannerController < ApplicationController
 
    def update
    	puts "inupdate"
-   	b= params[:budget]
+   	  b= params[:budget]
    
       g=params[:size]
       a= params[:age]
@@ -39,8 +39,6 @@ class PlannerController < ApplicationController
     	format.js {render :partial => 'planner/load'}
     end
    end
-
-
 
 
 end

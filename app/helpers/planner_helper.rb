@@ -32,4 +32,5 @@ module PlannerHelper
       return daylist
     end
 
+
 end

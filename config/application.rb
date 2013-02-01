@@ -1,5 +1,5 @@
 require File.expand_path('../boot', __FILE__)
-require 'pdfkit'
+
 
 
 require 'rails/all'
@@ -44,7 +44,7 @@ module Travel
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
 
-    config.middleware.use PDFKit::Middleware
+
 
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,

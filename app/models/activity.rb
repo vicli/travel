@@ -53,6 +53,23 @@ require 'csv'
         )
         record.save!
     end
+    CSV.foreach('app/assets/sfoact.csv',  "r:ISO-8859-1") do |row|
+        record = Activity.new(
+            :name   => row[0], 
+            :category => row[1],
+            :description => row[2],
+            :info_url => row[3],
+            :time => row[4],
+            :size => row[5],
+            :activity => row[6],
+            :budget => row[7],
+            :age => row[8],
+            :tourist => row[9],
+            :rating => row[10],
+            :location => row[11]
+        )
+        record.save!
+    end
     CSV.foreach('app/assets/bact.csv',  "r:ISO-8859-1") do |row|
         record = Activity.new(
             :name   => row[0], 

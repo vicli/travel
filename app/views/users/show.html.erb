@@ -4,6 +4,32 @@ body{
   background-size: cover;
 }
 
+.buttoncont {
+    float:center;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.buttag {
+    text-decoration: none;
+
+    border-radius: 5px;
+    box-shadow: 0 1px 0px rgba(255,255,255,0.1) inset, 0 0px 5px rgba(0,0,0,0.7);
+    font-size: 22px;
+    background: rgba(10,10,10,0.7); /* #191919 */
+    border: 1px solid #141414;
+    padding: 5px 20px 5px 20px;
+}
+.buttoncont:active, .buttoncont:focus {
+    box-shadow: 0 0 0 transparent inset;
+}
+
+.buttag:hover {
+    background: rgba(0,0,0,0.4); /* #101010 */
+    text-decoration: none;
+    color: white;
+}
+
 .span4 h1{
   font-size: 30px;
   padding-top: 50px;
@@ -14,8 +40,8 @@ body{
   color:#EE7600;
 }
 #info{
-  margin-top: 30px;
-  margin-left: 120px;
+  margin-top: 75px;
+  margin-left: 350px;
   border-radius: 10px;
   background-color: white;
   width: 200px;
@@ -24,7 +50,7 @@ body{
   padding: 15px;
   text-align: center;
   vertical-align: center;
-  float: left;
+  float: center;
 }
 #trips{
   margin-top: 30px;
@@ -46,8 +72,8 @@ body{
 
 <% provide(:title, @user.name) %>
 <div id = "info">
-			<h1>
-	<%= @user.name %></h1>
+      <h1>
+  <%= @user.name %></h1>
 
 
 <p>
@@ -64,6 +90,6 @@ body{
 <%= link_to 'Edit', edit_user_path(@user) %> 
 </div>
 
-<div id="trips">
-  <h1> My Trips </h1>
+<div class = "buttoncont">
+    <a href="/planner" class = "buttag">Start a New Trip!</a>
 </div>

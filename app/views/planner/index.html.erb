@@ -33,58 +33,7 @@
 });
     $( "#sortable" ).disableSelection();
   });
-    $(function() {
-    $("#sortable2").sortable({
-    start: function(event, ui) {
-       var init = ui.item.index();
-    }
-});
-    $("#sortable2").sortable({
-    stop: function(event, ui) {
-        var fin = ui.item.index();
-    }
-});
-    $( "#sortable2" ).disableSelection();
-  });
-      $(function() {
-    $("#sortable3").sortable({
-    start: function(event, ui) {
-       var init = ui.item.index();
-    }
-});
-    $("#sortable3").sortable({
-    stop: function(event, ui) {
-        var fin = ui.item.index();
-    }
-});
-    $( "#sortable3" ).disableSelection();
-  });
-    $(function() {
-    $("#sortable4").sortable({
-    start: function(event, ui) {
-       var init = ui.item.index();
-    }
-});
-    $("#sortable4").sortable({
-    stop: function(event, ui) {
-        var fin = ui.item.index();
-    }
-});
-    $( "#sortable4" ).disableSelection();
-  });
-      $(function() {
-    $("#sortable5").sortable({
-    start: function(event, ui) {
-       var init = ui.item.index();
-    }
-});
-    $("#sortable5").sortable({
-    stop: function(event, ui) {
-        var fin = ui.item.index();
-    }
-});
-    $( "#sortable5" ).disableSelection();
-  });
+    
   function divScroll(){
     var Top = document.getElementById('timecolumn');
     var Bot = document.getElementById('tabcont');
@@ -165,15 +114,16 @@
       }
       #infocontainer{
         background-color: #E1EEF4;
-        opacity: 0.85;
-        width: 350px;
-        height: 250px;
+        opacity: 0.9;
+        width: 330px;
+        height: 240px;
         display: inline;
         margin-right: -20px;
         margin-top: 60px;
         float: right; 
+        text-align: center;
         border-radius: 10px;
-        padding: 10px 10px 10px 10px;
+        padding: 20px 20px 20px 20px;
         overflow: hidden;
       }
       .span{
@@ -255,16 +205,16 @@
       #timecell{
         font-family: opensans;
         padding: 5px;
-        height: 45px;
+        height: 60px;
         text-align: center;
         font-size: 14px;
-        padding-top: 60px;
+        padding-top: 10px;
         margin-bottom: 2px;
       }
       .timecell{
         font-family: opensans;
         padding: 5px;
-        height: 45px;
+        height: 60px;
         text-align: center;
         font-size: 14px;
          margin-bottom: 2px;
@@ -385,6 +335,12 @@
         color: black;
 
       }
+      h3{
+        font-size: 14px;
+
+        color: #EE7600;
+        font-family: opensans;
+      }
 
       .name{
         display: inline;
@@ -394,19 +350,7 @@
         float: left;
    
       }
-      #add_tab{
-        float: right;
-        display:inline;
-        margin-right: 20px;
-        margin-top: 10px;
-        height: 30px;
-        width: 30px;
-        border-radius: 3px;
-        font-size: 26px;
-        background-color: white;
-        border-width:0px;
 
-      }
       #cityselect{
         width: 150px;
         height: 45px;
@@ -417,13 +361,12 @@
         margin-bottom: 20px;
 
       }
-      #cityselect{
-        width: 150px;
-        display: inline-block;
-        float:left;
-
-
+      li{
+        font-family: opensans;
+        font-size: 14px;
+        text-align: justify;
       }
+
       .wrapper-dropdown-3 {
     /* Size and position */
     position: relative;
@@ -450,36 +393,14 @@
     font-size: 18px;
     color: #8AA8BD;
 }
+    #load{
+      padding-top: 100px;
+
+    }
 
       #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
       #sortable li { margin: 0 3px 3px 3px; padding: 5em; padding-left: 1.5em; font-size: 1.4em; height: 30px; }
       #sortable li span { position: absolute; margin-left: -1.3em; }
-
-      #sortable2 { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-      #sortable2 li { margin: 0 3px 3px 3px; padding: 5em; padding-left: 1.5em; font-size: 1.4em; height: 30px; }
-      #sortable2 li span { position: absolute; margin-left: -1.3em; }
-
-      #sortable3 { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-      #sortable3 li { margin: 0 3px 3px 3px; padding: 5em; padding-left: 1.5em; font-size: 1.4em; height: 30px; }
-      #sortable3 li span { position: absolute; margin-left: -1.3em; }
-
-      #sortable4 { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-      #sortable4 li { margin: 0 3px 3px 3px; padding: 5em; padding-left: 1.5em; font-size: 1.4em; height: 30px; }
-      #sortable4 li span { position: absolute; margin-left: -1.3em; }
-
-      #sortable5 { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-      #sortable5 li { margin: 0 3px 3px 3px; padding: 5em; padding-left: 1.5em; font-size: 1.4em; height: 30px; }
-      #sortable5 li span { position: absolute; margin-left: -1.3em; }
-
-      #tab2{
-        
-      }
-      #tab3{
-      }
-      #tab4{
-      }
-      #tab5{
-      }
 
 
 /*      .overlay {
@@ -492,11 +413,6 @@
     </style>
 
     <script type="text/javascript">
-
-
-
-
-      var str = "hi";
       function showValues() {
      //    var valuesToSubmit = $("form").serialize();
      //  $.ajax({
@@ -514,31 +430,11 @@
           url: '/test',
           data: str,
           type:'GET',
-          // beforeSend: function(){
-          //   $('#loading').show();
-          // },
-
-          // complete: function(){
-          //   $('#loading').hide();
-          // },
+           beforeSend: function(){
+             $("#sortable").html('<p style="margin-left:220px">Loading...</p>');
+           },
           success: function(data){
-            // if (numberdays == 'd1'){
-               
-            // }
-            // if (numberdays == 'd2'){
-            //    $("#sortable2").html(data);
-            // }
-            // if (numberdays == 'd3'){
-            //    $("#sortable3").html(data);
-            // }
-            // if (numberdays == 'd4'){
-            //    $("#sortable4").html(data);
-            // }
-            // if (numberdays == 'd5'){
-            //    $("#sortable5").html(data);
-            // }
-
-           $(".tabcont").html(data);
+           $("#sortable").html(data);
           }
           })
       };
@@ -576,6 +472,9 @@
 
     <div id ="itinerarycontainer">
       <div class= "tabcont">
+      
+        <ul id = "sortable">
+        </ul>
 
       </div>     
     </div>
@@ -588,9 +487,10 @@
         <h2 class = "itheading">destination:</h2></div>
         <p><select name='city' onchange = "showValues()" id = "cityselect" class = "wrapper-dropdown-3">
 <!--           <option> Please select... </option> -->
-          <option value= "boston"><a> Boston </a></option>
+          
           <option value= "newyork"><a> New York City </a></option>
           <option value="sanfran"><a> San Francisco </a></option>
+          <option value= "boston"><a> Boston </a></option>
         </select></p>
 
       </form>
@@ -666,6 +566,15 @@
       </form>
       </div>
     <div id= "infocontainer" ondblclick= "clicked()">
+      <h3>Get Started with OnBored!</h3>
+      <ol>
+        <br />
+        <li>Choose: your destination</li>
+        <br />
+        <li>Customize: your desired parameters</li>
+        <br />
+        <li>View: your dream 1-day vacation plan! </li>
+      </ol>
     </div>
   </div>
 </div>

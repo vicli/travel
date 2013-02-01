@@ -5,9 +5,10 @@ Travel::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   root to:'static_pages#home'
 
+  match '/refresh', to: 'planner#refresh'
   match '/test', to:'planner#update'
   match '/about', to:'static_pages#about'
-  match 'http://nityas.scripts.mit.edu/onbored/', to:'static_pages#home'
+  match '/home', to:'static_pages#home'
   match '/planner', to:'planner#index'
  
   resources :sessions, only: [:new, :create, :destroy]
